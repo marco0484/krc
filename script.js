@@ -1,0 +1,29 @@
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", e => {
+
+        const id = link.getAttribute("href");
+
+        if(id.startsWith("#")){
+            e.preventDefault();
+
+            document.querySelector(id).scrollIntoView({
+                behavior:"smooth"
+            });
+        }
+
+    });
+
+});
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("header");
+
+    if(window.scrollY > 50){
+        header.style.background = "rgba(0,0,0,.98)";
+    }else{
+        header.style.background = "rgba(0,0,0,.90)";
+    }
+
+});
