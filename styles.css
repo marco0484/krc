@@ -185,6 +185,8 @@ h2{
     height:8px;
 }
 
+
+
 .gallery::-webkit-scrollbar-thumb{
     background:var(--primary);
     border-radius:20px;
